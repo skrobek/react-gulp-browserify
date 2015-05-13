@@ -1,0 +1,52 @@
+{
+  "name": "react-gulp-browserify",
+  "version": "0.0.1",
+  "description": "Starter based on gulp/browserify/coffeescript/react",
+  "author": "Pawel Skroban",
+  "devDependencies": {
+    "browser-sync": "~2.2.2",
+    "browserify": "^9.0.3",
+    "browserify-shim": "^3.8.2",
+    "coffee-reactify": "2.1.x",
+    "coffeeify": "~1.0.0",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-coffee": "~2.1.2",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-filesize": "0.0.6",
+    "gulp-minify-css": "^0.5.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "~0.5.6",
+    "gulp-sass": "~1.3.3",
+    "gulp-shell": "^0.2.10",
+    "gulp-sourcemaps": "^1.2.8",
+    "gulp-uglify": "~1.1.0",
+    "gulp-util": "^3.0.4",
+    "lodash": "^3.3.1",
+    "pretty-hrtime": "~1.0.0",
+    "require-dir": "^0.1.0",
+    "vinyl-source-stream": "~1.0.0",
+    "watchify": "^2.4.0"
+  },
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "jquery": "~2.1.0",
+    "flux": "^2.0.0",
+    "react": "^0.13.x"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim",
+      "coffee-reactify"
+    ]
+  },
+  "browser": {
+    "bootstrap": "./src/theme/js/bootstrap.min.js",
+    "react": "react/react.js"
+  },
+  "browserify-shim": {
+    "bootstrap": {
+      "depends": "jquery:jQuery"
+    }
+  }
+}
